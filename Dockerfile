@@ -10,3 +10,5 @@ RUN chmod -R a+w /app && chmod -R 777 /app
 
 RUN useradd -m myuser
 USER myuser
+
+CMD jupyter notebook --no-browser --port=${PORT} --ip=0.0.0.0 --allow-root
