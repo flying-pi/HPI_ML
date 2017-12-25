@@ -2,7 +2,7 @@ version: '3'
 services:
   web:
     build: .
-    command: 'jupyter notebook --no-browser --port=${PORT} --ip=0.0.0.0 --allow-root'
+    command: 'jupyter notebook --no-browser --port=${PORT} --ip=0.0.0.0 --allow-root --NotebookApp.password="sha1:6f50777b9654:d7be130f413745989835eb88241683e7078e2857"'
     ports:
      - "${PORT}:${PORT}"
     expose:
@@ -11,4 +11,4 @@ services:
     - ./:/app
 
 
-#    --NotebookApp.password="sha1:901c8e3ff902:7b4e423a545d08b148242268a75b4f2e9db044d8"
+#
